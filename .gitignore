@@ -1,7 +1,5 @@
 # dependencies
-/node_modules
-My_Etherscan_client/node_modules
-My_Etherscan-server/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
