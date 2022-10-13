@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom";
+import './Nav.css';
+
 function Nav() {
   return (
-    <div>nav area</div>
+    <>
+      <span><Link className="Nav-Link" to="/goerli">Goeril</Link></span>
+      <span><Link className="Nav-Link" to="/goerli">Ganache</Link></span>
+    </>
   );
 }
 

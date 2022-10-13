@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { useState } from "react";
 
 import Nav from "./Nav.js"
-import Main from "./component/Main.js";
-
+import Goerli from "./component/Goerli";
 import './App.css';
 
 function App() {
@@ -19,18 +18,20 @@ function App() {
     updatedBalance(balance);
   }
 
-
   return (
     <BrowserRouter>
       <div className="App">
-        <div className="subject">Hello world!</div>
+        <div className="subject">
+          <Link className="Link" to = "/">My EtherScan</Link>
+        </div>
         <nav className="App-nav">
           <Nav />
         </nav>
         <main className="App-contents">
           <Routes>
-            <Route path="/" element={
-              <Main 
+            <Route path="/" element={<div>home</div>} />
+            <Route path="/goerli" element={
+              <Goerli 
               account={account} 
               balance={balance}
               changeAccount={changeAccount}
@@ -38,7 +39,13 @@ function App() {
             />} />
           </Routes>
         </main>
-        <footer></footer>
+        <footer>
+          <coingecko-coin-market-ticker-list-widget  
+            coin-id="bitcoin" 
+            currency="usd" 
+            locale="en" 
+          />
+        </footer>
       </div>
     </BrowserRouter>
   );

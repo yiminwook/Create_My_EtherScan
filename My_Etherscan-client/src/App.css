@@ -8,12 +8,12 @@
   font-size: calc(30px + 2vmin);
   background-color:white;
   color: black;
+  text-decoration: none;
 }
 
 .App-nav { 
   background-color: #282c34;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -27,5 +27,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.Link {
+  text-decoration: none;
   color: black;
 }

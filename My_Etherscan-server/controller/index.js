@@ -1,3 +1,4 @@
 module.exports = {
-  usersController: require('./users'),
+  goerliController: require('./goerli'),
+  ganacheController: require('./ganache')
 };
